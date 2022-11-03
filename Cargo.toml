@@ -1,9 +1,11 @@
 [package]
 name = "yew-plotly"
+description = "yew wrapper for plotly.js"
 version = "0.1.0"
 authors = ["Adam Szalkowski <adam@szalkowski.de>"]
 edition = "2021"
 license = "MIT"
+documentation = "https://docs.rs/yew-plotly"
 repository = "https://github.com/butzist/yew-plotly.git"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
