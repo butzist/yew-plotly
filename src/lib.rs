@@ -1,15 +1,47 @@
+//! [Yew](https://yew.rs) wrapper for [plotly.js](https://plot.ly/javascript/)
+//!
+//! Provides a yew component wrapper around the plot.ly charting library.
+
 use plotly::Plot;
 use yew::prelude::*;
 
-// re-export plotly
+/// Re-exported plotly crate
 pub use plotly;
 
+/// Properties for the [Plotly] component
 #[derive(Properties, Clone, PartialEq)]
 pub struct PlotlyProps {
+    /// Plot data and layout
     pub plot: Plot,
 }
 
+/// Plotly component wrapper
+///
+/// # Examples
+///
+/// ```
+/// # use yew::prelude::*;
+/// # use yew_plotly::plotly::{Plot, Scatter};
+/// # use yew_plotly::Plotly;
+/// # use yew_plotly::plotly::common::Mode;
+/// #
+/// #[function_component(MyPlot)]
+/// fn my_plot() -> Html {
+///     let mut plot = Plot::new();
+///     let x_values = vec![1, 2, 3];
+///     let y_values = vec![1, 3, 2];
+///
+///     let trace = Scatter::new(x_values, y_values)
+///         .mode(Mode::LinesMarkersText)
+///         .name("Scatter");
+///
+///     plot.add_trace(trace);
+///
+///     html! { <Plotly plot={plot}/> }
+/// }
+/// ```
 pub struct Plotly {
+    /// Reference to the parent DOM node
     node_ref: NodeRef,
 }
 
