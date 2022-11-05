@@ -29,7 +29,24 @@ fn main() {
 }
 ```
 
-## Installation
+## Setup
+
+#### Load plotly.js in `index.html`
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Yew App</title>
+    <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+</head>
+
+</html>
+```
+
+#### Install `yew-plotly`
 
 ```
 cargo add yew-plotly
@@ -39,3 +56,4 @@ cargo add yew-plotly
 
 * [Yew](https://yew.rs)
 * [Plot.ly](https://plot.ly/javascript/)
+* [plotly-rs](https://github.com/igiagkiozis/plotly)
