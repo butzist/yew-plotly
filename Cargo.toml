@@ -1,8 +1,8 @@
 [package]
 name = "yew-plotly"
 description = "yew wrapper for plotly.js"
-version = "0.1.0"
-authors = ["Adam Szalkowski <adam@szalkowski.de>"]
+version = "0.2.0"
+authors = ["Adam Szalkowski <adam@szalkowski.de>", "Kaasa solution GmbH <info@kaasa.com>"]
 edition = "2021"
 license = "MIT"
 documentation = "https://docs.rs/yew-plotly"
@@ -11,9 +11,9 @@ repository = "https://github.com/butzist/yew-plotly.git"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-plotly = { version = "=0.8.1", features = ["wasm"] }
+plotly = { version = "0.8.3", features = ["wasm"] }
 wasm-bindgen = "0.2.83"
-yew = "0.19.3"
+yew = "0.20.0"
 
 [[example]]
 name = "scatter"
