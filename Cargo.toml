@@ -17,3 +17,6 @@ yew = "0.20.0"
 
 [[example]]
 name = "scatter"
+
+[dev_dependencies.yew]
+features = ["csr"]

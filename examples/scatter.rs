@@ -3,8 +3,8 @@ use yew_plotly::plotly::common::Mode;
 use yew_plotly::plotly::{Plot, Scatter};
 use yew_plotly::Plotly;
 
-#[function_component(App)]
-fn app() -> Html {
+#[function_component]
+fn App() -> Html {
     let mut plot = Plot::new();
     let x_values = vec![1, 2, 3];
     let y_values = vec![1, 3, 2];
@@ -19,5 +19,5 @@ fn app() -> Html {
 }
 
 fn main() {
-    yew::start_app::<App>();
+    yew::Renderer::<App>::new().render();
 }
