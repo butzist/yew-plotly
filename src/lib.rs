@@ -83,15 +83,10 @@ impl Component for Plotly {
 mod PlotlyJS {
     use wasm_bindgen::prelude::*;
 
-    #[wasm_bindgen]
+    #[wasm_bindgen(js_namespace = Plotly)]
     extern "C" {
-        #[wasm_bindgen(js_namespace = Plotly)]
         pub(crate) fn newPlot(node: JsValue, obj: JsValue);
-
-        #[wasm_bindgen(js_namespace = Plotly)]
         pub(crate) fn react(node: JsValue, obj: JsValue);
-
-        #[wasm_bindgen(js_namespace = Plotly)]
         pub(crate) fn purge(node: JsValue);
     }
 }
